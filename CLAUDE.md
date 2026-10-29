@@ -111,6 +111,7 @@ gnss-cuckoo-clock/
 |   |-- ONBOARDING.md             <- read this first
 |   |-- ai_policy_agreement/      <- sign before using AI tools
 |   |-- project-description.html  <- project scope; source of truth
+|   |-- project-description/      <- LaTeX edition of the same text, and its PDF
 |   `-- figures/                  <- illustrations (AI-generated; artistic, not engineering drawings)
 |-- firmware/                     <- Rust reference algorithm, simulator, controller firmware
 |-- translator/                   <- AI Rust-to-SPL translation and differential test harness
@@ -119,6 +120,17 @@ gnss-cuckoo-clock/
 |-- hardware/                     <- pendulums, vacuum tank, cuckoo mechanism, Teletype interface
 `-- test/                         <- timing measurements and analysis
 ```
+
+## Documents
+
+| Document | Type | Main source | Bibliography |
+|---|---|---|---|
+| Project description (PDF) | Project description, no external template | `docs/project-description/project-description.tex` | None |
+
+The PDF is built with `latexmk -pdf` from `docs/project-description/`, takes its illustrations
+from `docs/figures/`, and draws its two diagrams in TikZ. Its text follows
+`docs/project-description.html`, the source of truth: a change to one goes into the other in the
+same commit, with the PDF rebuilt.
 
 ## Curated Documents
 

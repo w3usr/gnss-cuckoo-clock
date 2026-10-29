@@ -18,7 +18,8 @@ load-bearing. An esoteric target language forces rigorous verification of AI-gen
 physical card medium forces real thinking about encoding and data integrity; a pendulum that must
 track GNSS to the second forces a real control-loop design.
 
-**The full project description is in [`docs/project-description.html`](docs/project-description.html).**
+**The full project description is in [`docs/project-description.html`](docs/project-description.html),
+and as a PDF in [`docs/project-description/project-description.pdf`](docs/project-description/project-description.pdf).**
 
 ## How it works
 
