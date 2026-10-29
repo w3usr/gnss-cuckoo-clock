@@ -22,7 +22,7 @@ Entries are appended newest at the bottom, and the `/commit` command writes them
 - **Sections/Files Affected**: The specific files or documents touched
 - **Nature of Contribution**: Draft / Edit / Analysis / Code generation / Research / Scaffolding
 - **Human Review Status**: Reviewed and verified / Partially reviewed / Pending review
-- **Git Hash**: Filled in after committing
+- **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
 ```
 
 Date and time come from the system clock via `date`, never from an estimate. The Tool field
@@ -43,7 +43,7 @@ carries the actual running model ID.
   claude.ai and published at https://claude.ai/artifact/NvzpvZ8yYe893bFaivyaNs)
 - **Nature of Contribution**: Draft and edit; architecture and timeline diagrams drawn as inline SVG
 - **Human Review Status**: Partially reviewed
-- **Git Hash**: Filled in after committing
+- **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
 
 ## [2026-10-29, time not recorded]
 - **Tool**: Google Gemini image generation ("Nano Banana"), exact model version not recorded
@@ -54,7 +54,7 @@ carries the actual running model ID.
 - **Nature of Contribution**: Image generation. Illustrations are artistic depictions, not
   engineering drawings; they do not show the actual build.
 - **Human Review Status**: Reviewed by NAF for depiction of project elements
-- **Git Hash**: Filled in after committing
+- **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
 
 ## [2026-10-29 13:38 UTC]
 - **Tool**: Claude (Anthropic), claude.ai web chat, claude-opus-5-5
@@ -66,7 +66,7 @@ carries the actual running model ID.
   text), `docs/figures/`, `HANDOFF.md` and `ai/handoff_log_entries.md` (handoff files, not committed)
 - **Nature of Contribution**: Edit and scaffolding
 - **Human Review Status**: Pending review
-- **Git Hash**: Filled in after committing
+- **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
 
 ## [2026-10-29 13:55 UTC]
 - **Tool**: Claude (Anthropic), claude-opus-5-5
@@ -84,4 +84,4 @@ carries the actual running model ID.
 - **Nature of Contribution**: Scaffolding and draft; names, visibility, license, funder, and
   review statuses as directed by NAF
 - **Human Review Status**: Pending review (`ai-translator.md` is explicitly a draft for review in the PR)
-- **Git Hash**: Filled in after committing
+- **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
