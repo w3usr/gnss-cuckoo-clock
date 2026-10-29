@@ -85,3 +85,15 @@ carries the actual running model ID.
   review statuses as directed by NAF
 - **Human Review Status**: Pending review (`ai-translator.md` is explicitly a draft for review in the PR)
 - **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
+
+## [2026-10-29 15:09 UTC]
+- **Tool**: Claude (Anthropic), claude-opus-5-5
+- **Session Purpose**: Produce a LaTeX-typeset PDF edition of the project description, at
+  NAF's request, with the text taken unchanged from `docs/project-description.html`.
+- **Sections/Files Affected**: `docs/project-description/project-description.tex` (new),
+  `docs/project-description/project-description.pdf` (new, built from it), `CLAUDE.md`
+  (Documents section, tree), `README.md` (PDF link)
+- **Nature of Contribution**: Typesetting and conversion; architecture and schedule diagrams
+  redrawn in TikZ from the page's SVGs
+- **Human Review Status**: Pending review
+- **Git Hash**: d6c51a1 (branch `project-description-pdf`, PR w3usr/gnss-cuckoo-clock#2)
