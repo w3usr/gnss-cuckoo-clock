@@ -96,4 +96,4 @@ carries the actual running model ID.
 - **Nature of Contribution**: Typesetting and conversion; architecture and schedule diagrams
   redrawn in TikZ from the page's SVGs
 - **Human Review Status**: Pending review
-- **Git Hash**: Filled in after committing
+- **Git Hash**: d6c51a1 (branch `project-description-pdf`, PR w3usr/gnss-cuckoo-clock#2)
