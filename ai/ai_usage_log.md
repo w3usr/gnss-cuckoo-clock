@@ -22,7 +22,7 @@ Entries are appended newest at the bottom, and the `/commit` command writes them
 - **Sections/Files Affected**: The specific files or documents touched
 - **Nature of Contribution**: Draft / Edit / Analysis / Code generation / Research / Scaffolding
 - **Human Review Status**: Reviewed and verified / Partially reviewed / Pending review
-- **Git Hash**: 8210ad4 (branch `instantiate-project`, PR w3usr/gnss-cuckoo-clock#1)
+- **Git Hash**: Filled in after committing
 ```
 
 Date and time come from the system clock via `date`, never from an estimate. The Tool field
