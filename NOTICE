@@ -1,20 +1,25 @@
-W3USR AI Project Template
+GNSS-Disciplined Cuckoo Clock
 Copyright (c) 2026 University of Scranton Amateur Radio Club (W3USR)
 
-Licensed under the Creative Commons Attribution 4.0 International License
-(CC BY 4.0). See LICENSE for the full text, or
-https://creativecommons.org/licenses/by/4.0/
+This repository is under two licenses:
 
-You are free to share and adapt this scaffold, including for other clubs
-and institutions, provided you give appropriate credit.
+  Code (firmware/, translator/, spl/, cards/, test/, and any other source
+  code or scripts in this repository) is licensed under the MIT License.
+  See LICENSE.
+
+  Documentation (docs/, and the README files and written design documents
+  elsewhere in the repository) is licensed under the Creative Commons
+  Attribution 4.0 International License (CC BY 4.0). See docs/LICENSE, or
+  https://creativecommons.org/licenses/by/4.0/
 
 Attribute as:
-  W3USR AI Project Template, University of Scranton Amateur Radio Club,
-  https://github.com/w3usr/ai_project_template
+  GNSS-Disciplined Cuckoo Clock, University of Scranton Amateur Radio Club,
+  https://github.com/w3usr/gnss-cuckoo-clock
 
-This license covers the template scaffold itself. A project instantiated
-from this template chooses its own license and replaces LICENSE and NOTICE
-accordingly (see README step 4).
+AI-assisted work: this repository contains material produced with
+generative AI tools, including the illustrations in docs/figures/ and the
+SPL programs produced by the translator. ai/ai_usage_log.md records each
+AI-assisted session.
 
-Portions of this scaffold derive from the W2NAF academic project template
-by Nathaniel A. Frissell (W2NAF), University of Scranton.
+The repository scaffold derives from the W3USR AI Project Template
+(https://github.com/w3usr/ai_project_template), CC BY 4.0.

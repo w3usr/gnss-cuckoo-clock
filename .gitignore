@@ -67,3 +67,9 @@ _site/
 # Claude Code local state
 .claude/settings.local.json
 CLAUDE.local.md
+
+# Rust build output
+target/
+
+# Handoff bundle from claude.ai (its contents are committed individually)
+gnss-cuckoo-clock-handoff.zip

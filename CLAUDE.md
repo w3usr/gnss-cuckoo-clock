@@ -1,27 +1,43 @@
-# {{PROJECT_NAME}}
+# GNSS-Disciplined Cuckoo Clock
 
 A project of the **University of Scranton Amateur Radio Club (W3USR)**.
 
 New to this club's repositories? Read [`docs/ONBOARDING.md`](docs/ONBOARDING.md) first.
 
 ## Project Overview
-{{ONE-PARAGRAPH DESCRIPTION: what is being built or written, who it serves, and why the club is doing it.}}
+An interdisciplinary senior design project (electrical engineering, mechatronics, computer
+science) building a mechanical cuckoo clock disciplined to multi-constellation GNSS. A
+reference control algorithm is written in Rust; an AI translation stage converts it to the
+Shakespeare Programming Language (SPL); a microcontroller-driven card punch encodes the SPL
+onto punched cards; a card reader loads them into the clock controller, which runs an SPL
+runtime. The movement is a Shortt-Synchronome-style free pendulum: a master pendulum in a
+sealed, partially evacuated tank, impulsed every 30 s, with a slave pendulum driving the cuckoo
+through a hit-and-miss synchronizer; GNSS trims the master through a PI loop wrapped around the
+mechanical loop. WWV/WWVB is a secondary reference. A Teletype Model 33 on a 20 mA current loop
+serves as operator log, listing printer, and paper-tape fallback; Nixie tubes display the time
+and a Morse announcement sounds on the hour. Each link in the chain is a real engineering
+problem, and each hand-off is an interface the teams must specify, test, and defend. The full
+scope is in [`docs/project-description.html`](docs/project-description.html).
 
-**Project type**: {{Station documentation / Club website / Outreach or demo material / Event or contest operation / Software build / Hardware or antenna build / Grant application / Newsletter, poster, or presentation / Other}}
-**Project lead**: {{NAME, CALLSIGN}}
-**Faculty advisor**: {{NAME, CALLSIGN}}
-**Club license trustee**: {{NAME, CALLSIGN}}
-**Other contributors**: {{NAMES AND CALLSIGNS}}
-**Funder**: {{FUNDER, or "Unfunded / club-internal"}}
-**Project period**: {{START to END}}
+**Project type**: Hardware build / Software build (mixed)
+**Project lead**: Nathaniel Frissell, W2NAF
+**Faculty advisor**: Nathaniel Frissell, W2NAF
+**Club license trustee**: TBD
+**Other contributors**: TBD (senior design team, roughly 6 to 9 students)
+**Funder**: Unfunded / club-internal
+**Project period**: TBD (two semesters)
 
 ## Project Goal
-{{1 to 3 sentences. What does "done" look like?}}
+The full chain (Rust reference, AI translation to SPL verified by differential testing,
+punched deck, card reader, SPL runtime, disciplined Shortt-style movement) runs end to end, and
+a multi-day run documents the clock's offset from GNSS, its holdover during a planned GNSS
+outage, and a correct cuckoo count on every hour, culminating in a final report and public demo.
 
 ## Repository Visibility
 
-**This repository is: {{PUBLIC | PRIVATE}}**, decided by {{NAME}} on {{YYYY-MM-DD}}.
-**Reason**: {{REASON}}
+**This repository is: PUBLIC**, decided by Nathaniel Frissell, W2NAF, on 2026-10-29.
+**Reason**: The project description, build log, and code are meant to be shared, and other
+clubs or HamSCI could reuse them. No credentials or access information go in this repository.
 
 This template sets no default. Decide deliberately at instantiation and record the decision
 above, because the answer changes what may be committed.
@@ -69,15 +85,15 @@ is fine. Aggregating a member's callsign with their address, schedule, or dorm i
 
 ## Repository Structure
 
-This project starts from the W3USR `ai_project_template` scaffold. Add or remove top-level
-directories to match the project. The scaffold expects:
+This project starts from the W3USR `ai_project_template` scaffold. The top-level folders
+below the scaffold follow the six subsystems in the project description.
 
 ```
-{{REPO_NAME}}/
+gnss-cuckoo-clock/
 |-- CLAUDE.md
 |-- README.md
-|-- LICENSE                       <- replace with the project's own; see README
-|-- NOTICE                        <- copyright and attribution
+|-- LICENSE                       <- MIT, for code
+|-- NOTICE                        <- copyright; which license covers what
 |-- .gitignore
 |-- .gitmodules                   <- present only if you add submodules
 |-- .claude/
@@ -85,15 +101,23 @@ directories to match the project. The scaffold expects:
 |   |-- commands/commit.md        <- /commit workflow
 |   `-- rules/
 |       |-- ai-governance.md          <- always applies
-|       |-- web-development.md        <- delete if no web work
-|       |-- latex-writing.md          <- delete if no LaTeX
-|       `-- python-code.md            <- delete if no Python
+|       |-- ai-translator.md          <- the AI Rust-to-SPL stage as a subsystem
+|       |-- web-development.md
+|       |-- latex-writing.md
+|       `-- python-code.md
 |-- ai/
 |   `-- ai_usage_log.md           <- mandatory AI session log
-|-- docs/
+|-- docs/                         <- CC BY 4.0 (docs/LICENSE)
 |   |-- ONBOARDING.md             <- read this first
-|   `-- ai_policy_agreement/      <- sign before using AI tools
-`-- {{PROJECT-SPECIFIC FOLDERS}}  <- e.g. src/, station/, web/, outreach/, logs/, hardware/
+|   |-- ai_policy_agreement/      <- sign before using AI tools
+|   |-- project-description.html  <- project scope; source of truth
+|   `-- figures/                  <- illustrations (AI-generated; artistic, not engineering drawings)
+|-- firmware/                     <- Rust reference algorithm, simulator, controller firmware
+|-- translator/                   <- AI Rust-to-SPL translation and differential test harness
+|-- spl/                          <- translated SPL programs that passed the harness
+|-- cards/                        <- card encoding spec, punch, reader
+|-- hardware/                     <- pendulums, vacuum tank, cuckoo mechanism, Teletype interface
+`-- test/                         <- timing measurements and analysis
 ```
 
 ## Curated Documents
@@ -159,11 +183,12 @@ One thing is non-negotiable: **every substantive AI session is logged in
 `ai/ai_usage_log.md` before the work is committed.** Use the `/commit` command, which does the
 logging and committing in the right order.
 
-{{If this project has constraints of its own that AI work must respect, write them into a
-rule file under `.claude/rules/` and name it here.}}
+This project also uses AI **as a subsystem**: the Rust-to-SPL translator. How its outputs are
+logged, verified against the Rust reference, and disclosed is governed by
+`.claude/rules/ai-translator.md`.
 
 ## Getting Help
 
-- Club questions, station access, on-air activity: {{ADVISOR OR TRUSTEE NAME, CALLSIGN, CONTACT}}
-- This repository: {{PROJECT LEAD NAME, CALLSIGN}}
-- Club meeting time and place: {{WHEN AND WHERE}}
+- Club questions, station access, on-air activity: Nathaniel Frissell, W2NAF (faculty advisor)
+- This repository: Nathaniel Frissell, W2NAF
+- Club meeting time and place: TBD
